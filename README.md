@@ -1,4 +1,4 @@
-# ALPS: Attention Localization and Pruning Strategy for Efficient Alignment of Large Language Models
+# ALPS
 
 > **Repository Status: Under Construction**  
 > We are actively organizing the codebase and reproduction scripts. Stay tuned—code will be available here soon!
