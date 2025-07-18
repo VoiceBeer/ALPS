@@ -2,7 +2,7 @@
 
 > **Repository Status:** This repository currently contains the attention head selection implementation of ALPS. The training code will be released in a future version due to ongoing research submissions.
 
-**ALPS (Attention Localization and Pruning Strategy)** is a novel PEFT method for efficiently aligning large language models by identifying and pruning attention heads that are less relevant to downstream tasks. This approach reduces computational and memory overhead while maintaining or even improving model performance.
+[**ALPS (Attention Localization and Pruning Strategy)**](https://arxiv.org/abs/2505.18799) is a novel PEFT method for efficiently aligning large language models by identifying and pruning attention heads that are less relevant to downstream tasks. This approach reduces computational and memory overhead while maintaining or even improving model performance.
 
 ![ALPS Framework](assets/alps.png)
 
