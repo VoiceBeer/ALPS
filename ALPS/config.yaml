@@ -1,0 +1,34 @@
+# ALPS (Attention Localization and Pruning Strategy) Configuration
+
+# Model configuration
+models:
+  base_model: "Qwen/Qwen2.5-7B-Instruct"  # Base model path
+  task_model: "Qwen/Qwen2.5-Coder-7B-Instruct"  # Task-specific model path
+
+# Output configuration
+output:
+  output_dir: "ALPS_output"  # Output directory
+  save_heatmap: true         # Whether to save heatmap
+  save_scores: true          # Whether to save sensitivity scores
+  save_top_heads: true       # Whether to save most sensitive attention heads
+  show_plot: false           # Whether to display plot (set false for headless environments)
+
+# Analysis parameters
+analysis:
+  distance_metric: "wasserstein_normalized"  # Distance metric: wasserstein, wasserstein_normalized, kl_divergence, cosine_similarity
+  top_k_percent: 10          # Save top k% most sensitive attention heads
+  heatmap_dpi: 300          # Heatmap resolution
+  colormap: "viridis"        # Heatmap color scheme
+  print_top_n: 5            # Number of top sensitive heads to print in summary
+
+# Device configuration
+device:
+  use_cuda: true            # Whether to use CUDA
+  device_map: "auto"        # Device mapping strategy
+  torch_dtype: "bfloat16"   # Model precision: float16, bfloat16, float32
+
+# Logging configuration
+logging:
+  level: "INFO"             # Logging level
+  format: "[%(asctime)s] [%(levelname)s] [%(filename)s:%(lineno)d:%(funcName)s] %(message)s"
+  datefmt: "%Y-%m-%d %H:%M:%S" 
